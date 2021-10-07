@@ -2,43 +2,39 @@ import React from 'react';
 //Impore style
 import styled from 'styled-components';
 import {About} from "../Style";
+import Toggle from './Toggle';
+import {AnimateSharedLayout} from "framer-motion"
 
 function FaqSection() {
     return (
         <Faq>
             <h2>Any Questions <span>FAQ</span></h2>
-            <div className="question">
-                <h4>How Do I Start?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Sunt mollit aliqua irure excepteur consequat magna Lorem cillum.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Daily Schedule</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Sunt mollit aliqua irure excepteur consequat magna Lorem cillum.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Differnt Payment Methods</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Sunt mollit aliqua irure excepteur consequat magna Lorem cillum.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>What Products Do You Offer.</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Sunt mollit aliqua irure excepteur consequat magna Lorem cillum.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
+            <AnimateSharedLayout>
+                <Toggle title="How Do I Start?">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Sunt mollit aliqua irure excepteur consequat magna Lorem cillum.</p>
+                        </div>
+                </Toggle>
+                <Toggle title="Daily Schedule">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Sunt mollit aliqua irure excepteur consequat magna Lorem cillum.</p>
+                    </div>
+                </Toggle>
+                <Toggle title="Differnt Payment Methods">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Sunt mollit aliqua irure excepteur consequat magna Lorem cillum.</p>
+                    </div>
+                </Toggle>
+                <Toggle title="What Products Do You Offer.">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Sunt mollit aliqua irure excepteur consequat magna Lorem cillum.</p>
+                    </div>
+                </Toggle>
+            </AnimateSharedLayout>
         </Faq>
     )
 };

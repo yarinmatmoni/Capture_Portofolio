@@ -9,10 +9,16 @@ import home2 from "../img/home2.png";
 //Import Style
 import {About,Description,Image} from "../Style";
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+//Import Animation
+import {fade} from "../animation";
+import { useScroll } from './useScroll';
 
 function ServicesSection() {
+    const [element,controls] = useScroll();
+
     return (
-        <Services>
+        <Services variants={fade} ref={element} animate={controls} initial="hidden">
             <Description>
                 <h2>High <span>quality</span> services</h2>
                 <Cards>

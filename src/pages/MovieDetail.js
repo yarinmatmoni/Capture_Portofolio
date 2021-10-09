@@ -70,6 +70,11 @@ const Awards = styled.div`
     margin: 5rem 8rem;
     align-items: center;
     justify-content: space-around;
+
+    @media (max-width:1300px){
+        margin: 2rem 2rem;
+        display: block;
+    }
 `;
 
 const AwardStyle = styled.div`
